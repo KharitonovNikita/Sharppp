@@ -26,5 +26,21 @@ namespace ToDoApp
             tasks.Add(new Task(taskId, taskName));
             Console.WriteLine($"Задача '{taskName}' добавлена.");
         }   
+
+        public void RemoveTask(int taskId)
+        {
+            var task = tasks.Find(t => t.Id == taskId);
+            if (task != null)
+            {
+                tasks.Remove(task);
+                Console.WriteLine($"Задача '{task.Name}' удалена.");
+            }
+            else
+            {
+                Console.WriteLine("Задача не найдена.");
+            }
+        }
     }
+
+    
 }
