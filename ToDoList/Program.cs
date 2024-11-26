@@ -40,6 +40,21 @@ namespace ToDoApp
                 Console.WriteLine("Задача не найдена.");
             }
         }
+
+        public void DisplayTasks()
+        {
+            if (tasks.Count == 0)
+            {
+                Console.WriteLine("Нет данной задачи.");
+            }
+            else
+            {
+                foreach (var task in tasks)
+                {
+                    Console.WriteLine($"ID: {task.Id} - {task.Name}");
+                }
+            }
+        }
     }
 
     
